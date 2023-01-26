@@ -1,7 +1,5 @@
 # Dependencies
-Make sure you have installed `beautifulsoup4` and `requests`:
+Install all dependencies with:
 ```bash
-$ pip install beautifulsoup4
-$ pip install requests
+$ pip3 install -r requirements.txt
 ```
-

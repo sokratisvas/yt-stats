@@ -4,13 +4,12 @@ import json
 import requests
 
 # Enter your Google API key
-API_KEY = None
+API_KEY = ""
 # Enter your channel's id (the tag below the name)
-USER_ID = None
+CHANNEL_URL = ""
 
-channel_url = "https://www.youtube.com/@" + USER_ID
 soup = BeautifulSoup(
-    requests.get(channel_url, cookies={"CONSENT": "YES+42"}).text, "html.parser"
+    requests.get(CHANNEL_URL, cookies={"CONSENT": "YES+42"}).text, "html.parser"
 )
 data = re.search(r"var ytInitialData = ({.*});", str(soup.prettify())).group(1)
 json_data = json.loads(data)
@@ -29,7 +28,7 @@ try:
 except:
     data = None
 
-with open(f"{USER_ID}-stats.json", "w") as f:
+with open(f"{'_'.join(channel_name.split())}-stats.json", "w") as f:
     f.write(json.dumps(data, indent=4))
 
 print(f"Channel Name:    {channel_name}")

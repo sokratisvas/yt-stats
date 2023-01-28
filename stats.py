@@ -5,7 +5,7 @@ import requests
 
 # Enter your Google API key
 API_KEY = ""
-# Enter your channel's id (the tag below the name)
+# Enter the channel's url
 CHANNEL_URL = ""
 
 soup = BeautifulSoup(

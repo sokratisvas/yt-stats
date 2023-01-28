@@ -2,7 +2,7 @@
 Extract the subscriber count, number of total views and videos of a YouTube channel.
 
 # Dependencies
-You need a `YouTube Data API v3`. Get one by following the steps [here](https://developers.google.com/youtube/v3/getting-started). 
+You need a `YouTube Data API v3` key. Get one by following the steps [here](https://developers.google.com/youtube/v3/getting-started). 
 
 Install all dependencies with:
 ```bash
